@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learner Page</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Container Styles */
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* Subject of Interest Styles */
+        .interests {
+            margin-bottom: 30px;
+        }
+
+        .interests h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .interests ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .interests li {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        /* Asked Questions Styles */
+        .asked-questions {
+            margin-bottom: 30px;
+        }
+
+        .asked-questions h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .asked-questions ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .asked-questions li {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        /* Related Questions Styles */
+        .related-questions {
+            margin-bottom: 30px;
+        }
+
+        .related-questions h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .related-questions ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .related-questions li {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .related-questions li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .related-questions li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Learner Page</h1>
+            <p>Welcome to your learning dashboard</p>
+        </header>
+
+        <div class="interests">
+            <h2>Subjects of Interest</h2>
+            <ul>
+                <li>Data Science</li>
+                <li>Machine Learning</li>
+                <li>Web Development</li>
+                <li>Artificial Intelligence</li>
+            </ul>
+        </div>
+
+        <div class="asked-questions">
+            <h2>Asked Questions</h2>
+            <ul>
+                <li>How to train a machine learning model?</li>
+                <li>What are the best practices for web development?</li>
+                <li>How does artificial intelligence impact our daily lives?</li>
+            </ul>
+        </div>
+
+        <div class="related-questions">
+            <h2>Questions Related to Your Interests</h2>
+            <ul>
+                <li><a href="#">How to start learning data science?</a></li>
+                <li><a href="#">What are the latest trends in machine learning?</a></li>
+                <li><a href="#">How to build a responsive website?</a></li>
+                <li><a href="#">Applications of AI in healthcare</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Dashboard - Ambiguity</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+ /* Header Styles */
+ header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form select,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 24px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Question Dashboard - Ambiguity</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Add New Question</h2>
+            <form action="#">
+                <label for="question-type">Question Type:</label>
+                <select id="question-type" name="question-type">
+                    <option value="multiple_choice">Multiple Choice</option>
+                    <option value="essay">Essay</option>
+                    <!-- Add more question types as needed -->
+                </select>
+
+                <label for="question-title">Title:</label>
+                <input type="text" id="question-title" name="question-title">
+
+                <label for="question-details">Details:</label>
+                <textarea id="question-details" name="question-details"></textarea>
+
+                <!-- Additional fields based on question type -->
+                <div id="additional-fields">
+                    <!-- Fields for multiple choice questions -->
+                    <div id="multiple-choice-fields" style="display: none;">
+                        <label for="options">Options:</label>
+                        <input type="text" id="options" name="options">
+                    </div>
+
+                    <!-- Fields for essay questions -->
+                    <div id="essay-fields" style="display: none;">
+                        <label for="word-limit">Word Limit:</label>
+                        <input type="text" id="word-limit" name="word-limit">
+                    </div>
+                </div>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ambiguity. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('question-type').addEventListener('change', function () {
+            var type = this.value;
+            var multipleChoiceFields = document.getElementById('multiple-choice-fields');
+            var essayFields = document.getElementById('essay-fields');
+
+            if (type === 'multiple_choice') {
+                multipleChoiceFields.style.display = 'block';
+                essayFields.style.display = 'none';
+            } else if (type === 'essay') {
+                multipleChoiceFields.style.display = 'none';
+                essayFields.style.display = 'block';
+            } else {
+                multipleChoiceFields.style.display = 'none';
+                essayFields.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
